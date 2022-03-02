@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/libs/d3v6.3.1/d3.js"></script>
+  <link rel="stylesheet" href="../../css/root.css">
+  <link rel="stylesheet" href="../../css/tree.cluster.polar.css">
+</head>
+
+<body>
+  <div style="width: 970px;margin: 0 auto;">
+    <div id="domId" style="width:970px;height: 970px;"></div>
+  </div>
+
+  <script type="module">
+    import { factory } from '../factory.js'
+    import { option } from './option.js'
+
+    const [tree, setTree] = factory.init('domId', option);
+
+    d3.json('./data.json').then(data => {
+
+      setTree(data, option)
+
+      setInterval(() => {
+        option.tree.isShowBranchLength = !option.tree.isShowBranchLength;
+        tree.renderBranch()
+      }, 1500)
+    })
+  </script>
+</body>
+
+</html>

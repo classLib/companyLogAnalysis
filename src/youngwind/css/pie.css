@@ -1,0 +1,32 @@
+/* 背景色 */
+.pie {
+  position: relative;
+  background-color:var(--background-color);
+}
+
+/* 主题色 */
+.pie>.main-group {
+  fill: var(--primary-1)
+}
+
+/* 标题 */
+
+.pie>.title-group>.title {
+  fill: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.pie>.title-group>.subTitle {
+  fill: var(--sub-title-color);
+  font-weight: 400;
+}
+
+
+.pie .path-group{
+  stroke: var(--primary-5);
+}
+
+.pie .path-group path:hover{
+  cursor: pointer;
+  fill-opacity: 0.8;
+}

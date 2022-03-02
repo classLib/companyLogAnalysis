@@ -1,0 +1,27 @@
+/* 背景色 */
+.wordCloudForce {
+  position: relative;
+  background-color:var(--background-color);
+}
+
+/* 主题色 */
+.wordCloudForce>.main-group {
+  fill: var(--primary-1);
+}
+
+/* 标题 */
+
+.wordCloudForce>.title-group>.title {
+  fill: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.wordCloudForce>.title-group>.subTitle {
+  fill: var(--sub-title-color);
+  font-weight: 400;
+}
+
+.wordCloudForce .text-group{
+  cursor:grab;
+  fill:var(--primary-1)
+}

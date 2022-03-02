@@ -1,0 +1,51 @@
+:root {
+  /* 背景底色 */
+  --background-color: #fff;
+  /* 文字颜色 */
+  --axes-color: #999999;
+  /* 标题 */
+  --title-color: #516b91;
+  /* 副标题 */
+  --sub-title-color: #93b7e3;
+  /* 网格线颜色 */
+  --axes-grid-line-color: #eeeeee;
+  /* 六级主题色 */
+  --primary-1: #93b7e3ee;
+  --primary-2: #59c4e6ee;
+  --primary-3: #edafdaee;
+  --primary-4: #516b91ee;
+  --primary-5: #a5e7f0ee;
+  --primary-6: #cbb0e3ee;
+}
+
+.chart-tooltip.active {
+  display: block;
+}
+
+.chart-tooltip {
+  display: none;
+  color: #212121;
+  max-width: 400px;
+  word-wrap: break-word;
+  padding: 1.5rem 1rem;
+  position: absolute;
+  background-color: #f8f9fa !important;
+  left: 0;
+  top: 0;
+  transform:  translateY(50px);
+  box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.chart-tooltip::after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  position: absolute;
+  transform: translateY(-15px);
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-color:  transparent transparent #f8f9fa transparent;
+}

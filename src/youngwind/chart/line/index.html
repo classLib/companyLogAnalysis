@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/libs/d3v6.3.1/d3.js"></script>
+  <link rel="stylesheet" href="../../css/root.css">
+  <link rel="stylesheet" href="../../css/line.css">
+</head>
+
+<body>
+  <div style="width: 970px;margin: 0 auto;">
+    <div id="domId" style="width: 970px;height: 600px;"></div>
+  </div>
+
+  <script type="module">
+    import { factory } from '../factory.js'
+    import { option } from './option.js'
+
+    const [line, setLine] = factory.init('domId', option);
+
+    d3.csv('./data.csv').then(data => {
+      data.sort((a, b) => b.other - a.other)
+      option.title.subText = 'x轴为定性数据'
+      setLine(data, option)
+
+      setTimeout(() => {
+        option.xAxis.type.name = 'value'
+        option.xAxis.key = 'other'
+        option.title.subText = 'x轴为定量数据'
+        setLine(data, option)
+      }, 1500)
+
+      setTimeout(() => {
+        option.xAxis.type.name = 'time'
+        option.line.curve=d3.curveCardinal.tension(0.1)
+        option.xAxis.key = 'date'
+        option.yAxis.key = 'other'
+        option.title.subText = 'x轴为时间'
+        setLine(data, option)
+      }, 3000)
+    })
+
+  </script>
+</body>
+
+</html>

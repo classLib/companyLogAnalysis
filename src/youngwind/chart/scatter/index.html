@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/libs/d3v6.3.1/d3.js"></script>
+  <link rel="stylesheet" href="../../css/root.css">
+  <link rel="stylesheet" href="../../css/scatter.css">
+</head>
+
+<body>
+  <div style="width: 970px;margin: 0 auto;">
+    <div id="domId" style="width: 970px;height: 600px;"></div>
+  </div>
+
+  <script type="module">
+    import { factory } from '../factory.js'
+    import { option } from './option.js'
+
+    const [scatter, setScatter] = factory.init('domId', option);
+
+    d3.csv('./data.csv').then(data => {
+      setScatter(data, option)
+
+      option.xAxis.key = 'amount';
+      setTimeout(() => {
+        setScatter(data, option)
+      }, 1500)
+    })
+  </script>
+</body>
+
+</html>

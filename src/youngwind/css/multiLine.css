@@ -1,0 +1,39 @@
+/* 背景色 */
+.multiLine {
+  position: relative;
+  background-color:var(--background-color);
+}
+
+/* 主题色 */
+.multiLine>.main-group {
+  fill: none;
+  stroke: var(--primary-1);
+  stroke-width:1.5px;
+  stroke-linejoin:'round';
+  stroke-linecap:'round'
+}
+
+/* 标题 */
+
+.multiLine>.title-group>.title {
+  fill: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.multiLine>.title-group>.subTitle {
+  fill: var(--sub-title-color);
+  font-weight: 400;
+}
+
+/* 坐标轴网格线 */
+.multiLine>.x-axis-group>path,
+.multiLine>.y-axis-group>path,
+.multiLine>.x-axis-group>.tick>line,
+.multiLine>.y-axis-group>.tick>line{
+  stroke: var(--axes-grid-line-color)
+}
+
+/* 坐标轴文字 */
+.multiLine>.y-axis-group,.multiLine>.x-axis-group{
+  color: var(--axes-color);
+}

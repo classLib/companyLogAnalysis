@@ -1,0 +1,37 @@
+/* 背景色 */
+.forceDirected {
+  position: relative;
+  background-color:var(--background-color);
+}
+
+/* 主题色 */
+.forceDirected>.main-group {
+  fill: var(--primary-1);
+}
+
+/* 标题 */
+
+.forceDirected>.title-group>.title {
+  fill: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.forceDirected>.title-group>.subTitle {
+  fill: var(--sub-title-color);
+  font-weight: 400;
+}
+
+.forceDirected .node-group{
+  cursor:grab;
+  fill:var(--primary-1)
+}
+
+.forceDirected .text-group{
+  cursor:grab;
+  fill:var(--primary-1)
+}
+
+.forceDirected .link-group{
+  stroke: var(--primary-1);
+  fill:var(--primary-1)
+}

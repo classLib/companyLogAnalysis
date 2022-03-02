@@ -1,0 +1,52 @@
+/* 背景色 */
+
+.polarClusterTree {
+  position: relative;
+  background-color: var(--background-color);
+}
+
+/* 主题色 */
+
+.polarClusterTree>.main-group {
+  fill: var(--primary-1);
+}
+
+/* 标题 */
+
+.polarClusterTree .title-group>.title {
+  fill: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.polarClusterTree .title-group>.subTitle {
+  fill: var(--sub-title-color);
+  font-weight: 400;
+}
+
+.polarClusterTree .link-group {
+  fill: none;
+  stroke:var(--primary-1);
+}
+
+.polarClusterTree  .link-extension-group{
+  fill: none;
+  stroke:var(--primary-1);
+  stroke-opacity: 0.25;
+}
+
+/**
+ * 鼠标悬浮效果
+ */
+.polarClusterTree .link--active{
+  stroke-width:3px;
+}
+
+.polarClusterTree .link-extension--active{
+  stroke-opacity:0.6;
+}
+
+.polarClusterTree .label--active{
+  cursor: pointer;
+  font-weight:bold;
+}

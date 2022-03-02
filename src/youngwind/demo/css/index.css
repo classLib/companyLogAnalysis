@@ -1,0 +1,21 @@
+#header > .header-title{
+  height: 10vh;
+  line-height: 10vh;
+  margin: 0;
+  text-align: center;
+  color: black;
+  border-bottom: #eee solid 1px;
+}
+
+#main .main-row{
+  height: 90vh;
+}
+
+.chart-container{
+  height: 50vh;
+  position: relative;
+}
+
+hr{
+  border-top: #eee solid 1px ;
+}

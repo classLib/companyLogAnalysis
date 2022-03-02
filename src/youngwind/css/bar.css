@@ -1,0 +1,37 @@
+/* 背景色 */
+
+.bar {
+  position: relative;
+  background-color: var(--background-color);
+}
+
+/* 主题色 */
+
+.bar>.main-group {
+  cursor: pointer;
+  fill: var(--primary-1)
+}
+
+/* 标题 */
+
+.bar>.title-group>.title {
+  fill: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.bar>.title-group>.subTitle {
+  fill: var(--sub-title-color);
+  font-weight: 400;
+}
+
+/* 坐标轴网格线 */
+
+.bar>.x-axis-group>path, .bar>.y-axis-group>path, .bar>.x-axis-group>.tick>line, .bar>.y-axis-group>.tick>line {
+  stroke: var(--axes-grid-line-color)
+}
+
+/* 坐标轴文字 */
+
+.bar>.y-axis-group, .bar>.x-axis-group {
+  color: var(--axes-color);
+}

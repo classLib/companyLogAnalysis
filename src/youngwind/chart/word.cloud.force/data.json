@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "name": "员工1",
+      "size": 100
+    },
+    {
+      "name": "员工2",
+      "size": 200
+    },
+    {
+      "name": "单词1",
+      "size": 10
+    },
+    {
+      "name": "单词2",
+      "size": 20
+    },
+    {
+      "name": "单词3",
+      "size": 30
+    },
+    {
+      "name": "单词4",
+      "size": 40
+    }
+  ],
+  "links": [
+    {
+      "source": "员工1",
+      "target": "单词1",
+      "value": 2
+    },
+    {
+      "source": "员工1",
+      "target": "单词2",
+      "value": 2
+    },
+    {
+      "source": "员工1",
+      "target": "单词3",
+      "value": 2
+    },
+    {
+      "source": "员工2",
+      "target": "单词4",
+      "value": 2
+    }
+  ]
+}
